@@ -29,11 +29,11 @@ while True:
     params['l'] = -60
     params['r'] = -60
   elif current == "left":
-    params['l'] = -60
-    params['r'] = 60
-  elif current == "right":
     params['l'] = 60
     params['r'] = -60
+  elif current == "right":
+    params['l'] = -60
+    params['r'] = 60
   elif current == "" or current== 'middle':
     params['l'] = 0
     params['r'] = 0

@@ -22,26 +22,28 @@ while True:
     continue
   print current
   params = {}
+  left=90
+  right=100
   if current == "up":
-    params['l'] = 60
-    params['r'] = 60
+    params['l'] = left
+    params['r'] = right
   elif current == "down":
-    params['l'] = -60
-    params['r'] = -60
+    params['l'] = -left
+    params['r'] = -right
   elif current == "left":
-    params['l'] = 60
-    params['r'] = -60
+    params['l'] = left
+    params['r'] = -right
   elif current == "right":
-    params['l'] = -60
-    params['r'] = 60
+    params['l'] = -left
+    params['r'] = right
   elif current == "" or current== 'middle':
     params['l'] = 0
     params['r'] = 0
   else:
     print(current)
     sys.exit(1)
+  print(params)
   f = urllib.urlopen('http://robot:5000/motor?%s' % urllib.urlencode(params))
-  print(f.read())
 
 
 
